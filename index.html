@@ -47,31 +47,33 @@
 <div id="app" class="app-container">
     
     <header class="relative w-full h-[400px] overflow-hidden">
-        <img :src="currentHeaderImage" alt="東京首頁" class="w-full h-full object-cover object-center transition-all duration-500">
-        
-        <div class="absolute bottom-8 right-4 flex space-x-3 z-20">
-            <button @click="currentTab = 'itinerary'" 
-                    :class="currentTab === 'itinerary' ? 'bg-white scale-110' : 'bg-white/80'" 
-                    class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
-                <i class="fa-solid fa-map-location-dot text-blue-500"></i>
-            </button>
-            <button @click="currentTab = 'info'" 
-                    :class="currentTab === 'info' ? 'bg-white scale-110' : 'bg-white/80'" 
-                    class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
-                <i class="fa-solid fa-circle-info text-blue-500"></i>
-            </button>
-            <button @click="currentTab = 'shopping'" 
-                    :class="currentTab === 'shopping' ? 'bg-white scale-110' : 'bg-white/80'" 
-                    class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
-                <i class="fa-solid fa-bag-shopping text-blue-500"></i>
-            </button>
-            <button @click="currentTab = 'expense'" 
-                    :class="currentTab === 'expense' ? 'bg-white scale-110' : 'bg-white/80'" 
-                    class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
-                <i class="fa-solid fa-wallet text-blue-500"></i>
-            </button>
-        </div>
-    </header>
+    <img :src="currentHeaderImage" alt="東京首頁" class="w-full h-full object-cover object-center transition-all duration-500">
+    
+    <div class="absolute bottom-8 right-4 flex space-x-3 z-20">
+        <button @click="currentTab = 'itinerary'" 
+                :class="currentTab === 'itinerary' ? 'bg-white scale-110' : 'bg-white/80'" 
+                class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
+            <img src="nav-map.png" alt="行程" class="w-full h-full object-contain">
+        </button>
+
+        <button @click="currentTab = 'info'" 
+                :class="currentTab === 'info' ? 'bg-white scale-110' : 'bg-white/80'" 
+                class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
+            <img src="nav-info.png" alt="資訊" class="w-full h-full object-contain">
+        </button>
+
+        <button @click="currentTab = 'shopping'" 
+                :class="currentTab === 'shopping' ? 'bg-white scale-110' : 'bg-white/80'" 
+                class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
+            <img src="nav-shop.png" alt="購物" class="w-full h-full object-contain">
+        </button>
+
+        <button @click="currentTab = 'expense'" 
+                :class="currentTab === 'expense' ? 'bg-white scale-110' : 'bg-white/80'" 
+                class="w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all backdrop-blur-sm p-2">
+            <img src="nav-money.png" alt="花費" class="w-full h-full object-contain">
+        </button>
+    </div> </header>
 
     <div class="relative -mt-6 bg-[#f8fafc] rounded-t-[30px] px-5 pt-6 z-10 min-h-[500px] max-w-[480px] mx-auto">
 
